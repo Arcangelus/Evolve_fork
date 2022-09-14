@@ -7742,22 +7742,22 @@ function sentience(){
         if (color === 99){
             global.race['shell_color'] = 'rainbow';
         }
-        else if (color >= 97 && color <= 98){
+        else if (color >= 97){
             global.race['shell_color'] = 'white';
         }
-        else if (color >= 93 && color <= 96){
+        else if (color >= 93){
             global.race['shell_color'] = 'red';
         }
-        else if (color >= 89 && color <= 92){
+        else if (color >= 89){
             global.race['shell_color'] = 'orange';
         }
-        else if (color >= 85 && color <= 88){
+        else if (color >= 85){
             global.race['shell_color'] = 'yellow';
         }
-        else if (color >= 75 && color <= 84){
+        else if (color >= 75){
             global.race['shell_color'] = 'purple';
         }
-        else if (color >= 65 && color <= 74){
+        else if (color >= 65){
             global.race['shell_color'] = 'blue';
         }
         else {
@@ -7770,13 +7770,13 @@ function sentience(){
         if (color >= 85){
             global.race['fox_color'] = 'white';
         }
-        else if (color >= 70 && color <= 84){
+        else if (color >= 70){
             global.race['fox_color'] = 'tan';
         }
-        else if (color >= 55 && color <= 69){
+        else if (color >= 55){
             global.race['fox_color'] = 'silver';
         }
-        else if (color >= 35 && color <= 54){
+        else if (color >= 35){
             global.race['fox_color'] = 'grey';
         }
         else {
