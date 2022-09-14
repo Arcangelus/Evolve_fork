@@ -121,6 +121,7 @@ export function gameLoop(act){
             break;
         case 'start':
             {
+		    // timers cut by 10. Unsure what this will do.
                 let main_timer = 250;
                 let mid_timer = 1000;
                 let long_timer = 5000;
@@ -140,10 +141,10 @@ export function gameLoop(act){
 
                 calcATime();
                 
-                if (global.settings.at > 0){
-                    main_timer = Math.ceil(main_timer * 0.5);
-                    mid_timer = Math.ceil(mid_timer * 0.5);
-                    long_timer = Math.ceil(long_timer * 0.5);
+                if (global.settings.at > 0){ //Time speed x50 rather than x2
+                    main_timer = Math.ceil(main_timer * 0.02);
+                    mid_timer = Math.ceil(mid_timer * 0.02);
+                    long_timer = Math.ceil(long_timer * 0.02);
                 }
 
                 if (webWorker.w){
@@ -173,11 +174,14 @@ function calcATime(){
     let timeDiff = dt - global.stats.current;
     if (global.stats.hasOwnProperty('current') && (timeDiff >= 120000 || global.settings.at > 0)){
         if (timeDiff >= 120000){
-            global.settings.at += Math.floor(timeDiff / 3333);
+            global.settings.at += Math.floor(timeDiff / 2000);
+//            global.settings.at += Math.floor(timeDiff / 3333);
         }
+	/* //This is the limit of "offline time"
         if (global.settings.at > 11520){
             global.settings.at = 11520;
         }
+	*/
     }
 }
 
